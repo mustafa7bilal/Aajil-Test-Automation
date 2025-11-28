@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
-import chai from "chai";
-
-import { PurchasePage } from "../pages/PurchasePage.js";
+import { PurchasePage } from "../pages/PurchasePage";
 
 export function purchaseEndToEnd(deptCity, desCity, flightSeq) {
   const page = new PurchasePage();
