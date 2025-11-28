@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-28T19:46:32.135Z",
+    "end": "2025-11-28T19:46:56.469Z",
+    "duration": 24334,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8bf35f8e-3ea8-465e-b6e8-67d30a45fd54",
+      "title": "",
+      "fullFile": "cypress\\e2e\\purchaseTests.cy.js",
+      "file": "cypress\\e2e\\purchaseTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15588062-a20d-494e-a552-56ef3b42b0b7",
+          "title": "BlazeDemo Purchase Flight Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 1: Boston → Berlin, Flight 2",
+              "fullTitle": "BlazeDemo Purchase Flight Tests Test 1: Boston → Berlin, Flight 2",
+              "timedOut": null,
+              "duration": 6980,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _purchaseEndToEnd.purchaseEndToEnd)(\"Boston\", \"Berlin\", 2);",
+              "err": {},
+              "uuid": "77b1812b-51b9-44cb-af35-546f3316dca3",
+              "parentUUID": "15588062-a20d-494e-a552-56ef3b42b0b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 2: Random inputs",
+              "fullTitle": "BlazeDemo Purchase Flight Tests Test 2: Random inputs",
+              "timedOut": null,
+              "duration": 4708,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _purchaseEndToEnd.purchaseEndToEnd)();",
+              "err": {},
+              "uuid": "106afa0b-a6b1-4d35-acf3-fd7c30954165",
+              "parentUUID": "15588062-a20d-494e-a552-56ef3b42b0b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 3: Boston → Boston (should fail)",
+              "fullTitle": "BlazeDemo Purchase Flight Tests Test 3: Boston → Boston (should fail)",
+              "timedOut": null,
+              "duration": 40,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.on('fail', err => {\n  expect(err.message).to.include(\"Departure and destination cannot be the same!\");\n  return false;\n});\n(0, _purchaseEndToEnd.purchaseEndToEnd)(\"Boston\", \"Boston\", 1);",
+              "err": {},
+              "uuid": "a75c66bd-94b0-4f76-83ec-b33473e2ae6e",
+              "parentUUID": "15588062-a20d-494e-a552-56ef3b42b0b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 4: Paris → Berlin, Flight 0 (invalid)",
+              "fullTitle": "BlazeDemo Purchase Flight Tests Test 4: Paris → Berlin, Flight 0 (invalid)",
+              "timedOut": null,
+              "duration": 4753,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.on('fail', err => {\n  expect(err.message).to.include(\"Invalid flight sequence number!\");\n  return false;\n});\n(0, _purchaseEndToEnd.purchaseEndToEnd)(\"Paris\", \"Berlin\", 0);",
+              "err": {},
+              "uuid": "2306d409-d46a-4b69-912b-cb20b048c9da",
+              "parentUUID": "15588062-a20d-494e-a552-56ef3b42b0b7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test 5: Random valid inputs of choice",
+              "fullTitle": "BlazeDemo Purchase Flight Tests Test 5: Random valid inputs of choice",
+              "timedOut": null,
+              "duration": 4764,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _purchaseEndToEnd.purchaseEndToEnd)(\"Philadelphia\", \"Rome\", 1);",
+              "err": {},
+              "uuid": "bcea6f06-9bd3-415b-aa04-16a422be03d5",
+              "parentUUID": "15588062-a20d-494e-a552-56ef3b42b0b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77b1812b-51b9-44cb-af35-546f3316dca3",
+            "106afa0b-a6b1-4d35-acf3-fd7c30954165",
+            "a75c66bd-94b0-4f76-83ec-b33473e2ae6e",
+            "2306d409-d46a-4b69-912b-cb20b048c9da",
+            "bcea6f06-9bd3-415b-aa04-16a422be03d5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21245,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
