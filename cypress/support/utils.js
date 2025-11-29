@@ -8,7 +8,7 @@ export function getRandomCity(excludeCity) {
 }
 
 export function getRandomFlightSeq(max = 3) {
-    return Math.floor(Math.random() * max) + 1; // returns 1,2,3
+    return Math.floor(Math.random() * max) + 1; 
 }
 
 export function getRandomString(length = 6) {
