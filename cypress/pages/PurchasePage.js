@@ -1,5 +1,5 @@
 export class PurchasePage {
-  // Locators
+  
   fromPortSelect = "select[name='fromPort']";
   toPortSelect = "select[name='toPort']";
   findFlightsBtn = "input[type='submit'][value='Find Flights']";
@@ -18,7 +18,7 @@ export class PurchasePage {
   rememberMeCheckbox = "#rememberMe";
   purchaseBtn = "input[type='submit'][value='Purchase Flight']";
 
-  // Methods
+  
   selectDepartureCity(city) {
     cy.get(this.fromPortSelect).select(city);
   }
