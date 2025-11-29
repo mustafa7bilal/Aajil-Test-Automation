@@ -27,7 +27,7 @@
 Cypress.Commands.add('purchaseEndToEnd', (deptCity = null, desCity = null, flightSeq = null) => {
     cy.log(`Starting purchase flow with: ${deptCity || 'random'}, ${desCity || 'random'}, ${flightSeq || 'random'}`);
     
-    // Input validation
+    
     if (deptCity && desCity && deptCity === desCity) {
         throw new Error('Departure and destination cities cannot be the same');
     }
@@ -43,7 +43,7 @@ Cypress.Commands.add('purchaseEndToEnd', (deptCity = null, desCity = null, fligh
 
     homePage.visit();
 
-    // Handle city selection (random or provided)
+    
     cy.wrap(Promise.all([
         deptCity ? deptCity : homePage.getRandomCity('select[name="fromPort"]'),
         desCity ? desCity : homePage.getRandomCity('select[name="toPort"]')
@@ -54,7 +54,7 @@ Cypress.Commands.add('purchaseEndToEnd', (deptCity = null, desCity = null, fligh
                 .selectDestinationCity(finalDesCity)
                 .findFlights();
 
-        // Handle flight sequence selection (random or provided)
+       
         return flightSeq ? 
             flightSeq : 
             flightSelectionPage.getRandomFlightIndex();
@@ -63,12 +63,11 @@ Cypress.Commands.add('purchaseEndToEnd', (deptCity = null, desCity = null, fligh
         
         flightSelectionPage.selectFlightByIndex(finalFlightSeq);
 
-        // Fill purchase form with random data
+        
         const userData = purchasePage.generateRandomUserData();
         purchasePage.fillPurchaseForm(userData);
         purchasePage.purchaseFlight();
 
-        // Validate purchase
         confirmationPage.validatePurchase();
         
         return cy.wrap({
@@ -78,7 +77,7 @@ Cypress.Commands.add('purchaseEndToEnd', (deptCity = null, desCity = null, fligh
             status: 'Success'
         });
     }).catch((error) => {
-        cy.log(`❌ Test failed: ${error.message}`);
+        cy.log(` Test failed: ${error.message}`);
         throw error;
     });
 });
